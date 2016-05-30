@@ -1,0 +1,51 @@
+Word Prioritizations:
+	Words with letters in close proximity to one another
+	Words with repeating letters
+	Popular/common words
+
+Categorizing words:
+	Grammatical sentence structure, nouns, verbs, adjecectives...
+	3 and 4 letter words
+
+Search Terms:
+	Ascending words with and 1without priority->
+		next char is greater than current
+		overall more chars are in ascending order
+		first char is less than last char
+	Descending words -> 
+
+	words in a given range after prioritizing
+
+
+Shape1{
+	6: [0,1,3],
+	5: [0,2,3],
+	4: [0,2,3],
+	3: [0,2],
+	2: [0,1,3],
+	1: [0,1,3]
+}
+Shape2{
+	6: [5,7,8],
+	5: [5,7,8],
+	4: [5,7],
+	3: [4,5,7],
+	2: [5,6,8],
+	1: [5,7,8]
+}
+Shape3{
+	6: [8,10],
+	5: [7,8,10],
+	4: [7,9,10],
+	3: [7,9,10],
+	2: [8,10],
+	1: [7,8,10]
+}
+Shape4{
+	6: [8,10,12],
+	5: [8,10,12],
+	4: [9,10,12],
+	3: [9,10,12],
+	2: [10,12,13],
+	1: [10,12,13]
+}
