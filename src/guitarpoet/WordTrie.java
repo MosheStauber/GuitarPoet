@@ -157,6 +157,27 @@ public class WordTrie {
         }
         return wordList;
     }
+    
+    /*
+        Returns a list of all the words in the trie containing only letters
+        within the range specified. It only accesses children in the 
+        range using indices.
+    */
+    public List<Word> getAllWordsWithLetters(char[] letters){
+        
+        List<Word> wordList = new ArrayList<>();
+        for(Character c : letters){
+            int idx = c - 'a';
+            WordTrie node = children.get(idx);
+            if(node != null){
+                if(node.isWordEnding()){
+                    wordList.add(new Word(node.getWord(), node.getUsefullness()));
+                }
+                wordList.addAll(node.getAllWordsWithLetters(letters));
+            }
+        }
+        return wordList;
+    }
 
     
     

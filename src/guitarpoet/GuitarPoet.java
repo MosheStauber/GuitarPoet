@@ -41,11 +41,15 @@ public class GuitarPoet {
         
         // User prompt
         while(true){
+//                        System.out.println("Size of the program: " + (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()));
+
             System.out.println("\n"
                     + "Press q to quit.\n"
                     + "1. Enter 'a,g' to get word in range.\n"
                     + "2. Enter 'all,3' to get all 3 letter words.\n"
-                    + "3. Enter 'all' to get all words.");
+                    + "3. Enter 'all' to get all words.\n"
+                    + "4. Enter a list of letters separated by commas\n\t"
+                    + "ie 'a,g,f,r,t' to get all words with those letters.");
             
             Scanner in = new Scanner(System.in);
             String input = in.nextLine();  
@@ -68,14 +72,26 @@ public class GuitarPoet {
                         System.out.printf("Word: %s Usefullness: %d\n", w, w.getUsefulness());                   
                     }
                 }
-            }else{
+            }else if (params.length == 2){
                 List<Word> words = 
                         wordTrie.getAllWordsInRange(params[0].charAt(0), params[1].charAt(0));
                 Collections.sort(words);
                 for(Word w : words){
                     System.out.printf("Word: %s Usefullness: %d\n", w, w.getUsefulness());                   
                 }
-            }           
+            } else if(params.length > 2){
+                char [] chars = new char[params.length];
+                for(int i = 0; i < params.length; i++){
+                    chars[i] = params[i].charAt(0);
+                }
+                List<Word> words = 
+                        wordTrie.getAllWordsWithLetters(chars);
+                //Collections.sort(words);
+                for(Word w : words){
+                    System.out.printf("Word: %s Usefullness: %d\n", w, w.getUsefulness());                   
+                }
+            }
+            
         }
     }
 
