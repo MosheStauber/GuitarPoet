@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
@@ -18,12 +19,12 @@ import java.util.Scanner;
  * @author moshe
  */
 public class GuitarPoet {
-
+    private static List<String> popularWords;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        loadPopularWords();
         // Create a new Trie and add all the words to it
         WordTrie wordTrie = new WordTrie(null, null, false);
         try{
@@ -48,8 +49,8 @@ public class GuitarPoet {
                     + "1. Enter 'a,g' to get word in range.\n"
                     + "2. Enter 'all,3' to get all 3 letter words.\n"
                     + "3. Enter 'all' to get all words.\n"
-                    + "4. Enter a list of letters separated by commas\n\t"
-                    + "ie 'a,g,f,r,t' to get all words with those letters.");
+                    + "4. Enter a list of letters separated by commas\n"
+                    + "\tie 'a,g,f,r,t' to get all words with those letters.");
             
             Scanner in = new Scanner(System.in);
             String input = in.nextLine();  
@@ -94,6 +95,20 @@ public class GuitarPoet {
             
         }
     }
+    
+    public static void loadPopularWords(){
+        popularWords = new ArrayList<>();
+        try{
+            BufferedReader br = new BufferedReader(new FileReader(new File("5kMostPopularWords.csv")));
+            String line;
+            while ((line = br.readLine()) != null) {
+                String word = line.split(",")[1];
+                popularWords.add(word);
+                System.out.println(word);
+            } 
+            br.close();
+        }catch(Exception e){ }
+    }
 
     /*
         Returns an integer from 0 - 1000 as a uselfullness value. The higher the 
@@ -102,26 +117,28 @@ public class GuitarPoet {
         up to 50 percent of the usefullness value, with the other 2 categories 
         contributing up to 25 percent each to the total.
     */
-    private static int calculateUsefullness(String line) {
+    private static int calculateUsefullness(String word) {
         int proximity = 0;
         int repeating = 0;
         int popular = 0;
         
-        int[] repeats = new int[26];
-        repeats[line.charAt(0) - 'a']++;
         
-        int wordLength = line.length();        
+        
+        int[] repeats = new int[26];
+        repeats[word.charAt(0) - 'a']++;
+        
+        int wordLength = word.length();        
         for(int i = 1; i < wordLength; i++){
-            char curr = line.charAt(i);
-            char prev = line.charAt(i-1);
+            char curr = word.charAt(i);
+            char prev = word.charAt(i-1);
             
-            proximity += (500/wordLength) - Math.abs(curr - prev) * 10;            
+            proximity += (400/wordLength) - Math.abs(curr - prev) * 10;            
             repeats[curr - 'a']++;
         }
         
         for(int i = 0; i < repeats.length; i++){
             if(repeats[i] > 1){
-                repeating += 250*(repeats[i]/wordLength); 
+                repeating += 200*(repeats[i]/wordLength); 
             }
         }
         

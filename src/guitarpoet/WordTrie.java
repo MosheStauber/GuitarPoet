@@ -10,11 +10,11 @@ import java.util.List;
 
 /**
  *
- * This class contains the entire English dictionary. Each node in the Trie has
- * a corresponding letter and a list of children nodes. Each child node is 
- * positioned in the list of size 26 (for the lowercase letters of the alphabet)
- * by its ASCII value index minus the value of 'a'. A character node at the end 
- * of a word is marked as the end of the node.
+ * This class contains the entire English dictionary. 
+ * Each node in the Trie has a corresponding letter and a list of children nodes.
+ * Each child node is positioned in the list of size 26 (for the lowercase letters of the alphabet)
+ * by its ASCII value index minus the value of 'a'. 
+ * A character node at the end of a word is marked as the end of the node.
  * 
  * @author moshe
  */

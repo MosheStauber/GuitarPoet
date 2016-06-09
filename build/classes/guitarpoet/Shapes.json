@@ -1,0 +1,97 @@
+    
+[
+        {
+            "id":"Shape 01",
+            "rootOffset":1,
+            "fretPosition":{
+                "a":{"stringNumber":6, "offset":1},
+                "b":{"stringNumber":6, "offset":3},
+                "c":{"stringNumber":5, "offset":0},
+                "d":{"stringNumber":5, "offset":1},
+                "e":{"stringNumber":5, "offset":3},
+                "f":{"stringNumber":4, "offset":0},
+                "g":{"stringNumber":4, "offset":2},
+                "h":{"stringNumber":4, "offset":3},
+                "i":{"stringNumber":3, "offset":0},
+                "j":{"stringNumber":3, "offset":2},
+                "k":{"stringNumber":3, "offset":3},
+                "l":{"stringNumber":2, "offset":1},
+                "m":{"stringNumber":2, "offset":3},
+                "n":{"stringNumber":1, "offset":0},
+                "o":{"stringNumber":1, "offset":1},
+                "p":{"stringNumber":1, "offset":3}
+            }
+            
+        },
+        {
+            "id":"Shape 02",
+            "rootOffset":0,
+            "fretPosition":{
+                "q":{"stringNumber":6, "offset":0},
+                "r":{"stringNumber":6, "offset":2},
+                "s":{"stringNumber":6, "offset":4},
+                "t":{"stringNumber":5, "offset":0},
+                "u":{"stringNumber":5, "offset":2},
+                "v":{"stringNumber":5, "offset":4},
+                "w":{"stringNumber":4, "offset":1},
+                "x":{"stringNumber":4, "offset":2},
+                "y":{"stringNumber":4, "offset":4},
+                "z":{"stringNumber":3, "offset":1},
+                "a":{"stringNumber":3, "offset":2},
+                "b":{"stringNumber":3, "offset":4},
+                "c":{"stringNumber":2, "offset":2},
+                "d":{"stringNumber":2, "offset":4},
+                "e":{"stringNumber":2, "offset":5},
+                "f":{"stringNumber":1, "offset":2},
+                "g":{"stringNumber":1, "offset":4},
+                "h":{"stringNumber":1, "offset":5}
+            }
+        },
+        {
+            "id":"Shape 03",
+            "rootOffset":3,
+            "fretPosition":{
+                "i":{"stringNumber":6, "offset":0},
+                "j":{"stringNumber":6, "offset":1},
+                "k":{"stringNumber":6, "offset":3},
+                "l":{"stringNumber":5, "offset":0},
+                "m":{"stringNumber":5, "offset":2},
+                "n":{"stringNumber":5, "offset":3},
+                "o":{"stringNumber":4, "offset":0},
+                "p":{"stringNumber":4, "offset":2},
+                "q":{"stringNumber":4, "offset":3},
+                "r":{"stringNumber":3, "offset":0},
+                "s":{"stringNumber":3, "offset":2},
+                "t":{"stringNumber":2, "offset":0},
+                "u":{"stringNumber":2, "offset":1},
+                "v":{"stringNumber":2, "offset":3},
+                "w":{"stringNumber":1, "offset":0},
+                "x":{"stringNumber":1, "offset":1},
+                "y":{"stringNumber":1, "offset":3}
+            }
+        },
+        {
+            "id":"Shape 04",
+            "rootOffset":3,
+            "fretPosition":{
+                "z":{"stringNumber":6, "offset":0},
+                "a":{"stringNumber":6, "offset":2},
+                "b":{"stringNumber":6, "offset":3},
+                "c":{"stringNumber":5, "offset":0},
+                "d":{"stringNumber":5, "offset":2},
+                "e":{"stringNumber":5, "offset":3},
+                "f":{"stringNumber":4, "offset":0},
+                "g":{"stringNumber":4, "offset":2},
+                "h":{"stringNumber":3, "offset":-1},
+                "i":{"stringNumber":3, "offset":0},
+                "j":{"stringNumber":3, "offset":2},
+                "k":{"stringNumber":2, "offset":0},
+                "l":{"stringNumber":2, "offset":1},
+                "m":{"stringNumber":2, "offset":3},
+                "n":{"stringNumber":1, "offset":0},
+                "o":{"stringNumber":1, "offset":2},
+                "p":{"stringNumber":1, "offset":3}
+            }
+        }
+    ]
+

@@ -16,7 +16,7 @@ Search Terms:
 
 	words in a given range after prioritizing
 
-	Arpegios of any combination. 
+	Arpeggios of any combination. 
 
 
 BASED ON F MAJOR
@@ -53,7 +53,7 @@ Shape4{
 	1: [10,12,13r]		n,o,p
 }
 
-SHAPE 1 ARPEGIOS
+SHAPE 1 ARPEGGIOS
 (F-Major) 	 a c e h j l n
 (G-Minor)   b d f i k m p
 (A-Minor)   c e g j l n  
@@ -62,11 +62,35 @@ SHAPE 1 ARPEGIOS
 (D-Minor)	 f h j m o 
 (E-dim) 	 g i k n p
 
-SHAPE 2 ARPEGIOS
+SHAPE 2 ARPEGGIOS
 (F-Major)   q s u x z b e g
 (G-Minor)   r t v y a c f h
-(A-Minor)   s u w z b d g i
+(A-Minor)   s u w z b d g 
 (B^b-Major) t v x a c e h 
+(C-Major)	 u w y b d f  
+(D-Minor)	 v x z c e g 
+(E-Dim)	 w y a d f h 
+
+SHAPE 3 AEPEGGIOS
+(F-Major)   n p r u w y
+(G-Minor)   o q s v x
+ 
+(A-Minor)   i k m p r t w y
+(B^b-Major) j l n q s u x 
+(C-Major)	 k m o r t v y   
+(D-Minor)	 l n p s u w  
+(E-Dim)	 m o q t v x 
+
+SHAPE 4 ARPEGGIOS
+(F-Major)   b d f i k m p
+(G-Minor)   c e g j l n 
+(A-Minor)   d f h k m o 
+(B^b-Major) e g i l n p
+(C-Major)	 f h j m o   
+
+(D-Minor)	 z b d g i k n p
+(E-Dim)	 a c e h j l o 
+	
 
 
 
